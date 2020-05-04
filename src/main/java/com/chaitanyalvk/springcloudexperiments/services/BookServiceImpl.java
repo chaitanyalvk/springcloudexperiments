@@ -11,7 +11,7 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Book getBookById(UUID bookId) {
-		return Book.builder().id(UUID.randomUUID())
+		return Book.builder().id(bookId)
 				.author("LVKC")
 				.title("SpringMeNow")
 				.isbn("2020-04-28-CRN-TIMES")

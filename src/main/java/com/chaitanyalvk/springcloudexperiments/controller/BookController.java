@@ -22,7 +22,7 @@ public class BookController {
 		this.bookService = bookService;
 	}
 
-	@GetMapping({"/bookId"})
+	@GetMapping({"/{bookId}"})
 	public ResponseEntity<Book> getBook(@PathVariable("bookId")  UUID bookId) {
 		return new ResponseEntity<>(bookService.getBookById(bookId), HttpStatus.OK);
 	}

@@ -18,4 +18,20 @@ public class BookServiceImpl implements BookService {
 				.build();
 	}
 
+	@Override
+	public Book addBook(Book book) {
+		
+		return Book.builder().id(book.getId())
+				.author(book.getAuthor())
+				.title(book.getTitle())
+				.isbn(book.getIsbn())
+				.build();
+		
+	}
+
+	@Override
+	public void updateBook(UUID bookId, Book book) {
+		
+	}
+
 }

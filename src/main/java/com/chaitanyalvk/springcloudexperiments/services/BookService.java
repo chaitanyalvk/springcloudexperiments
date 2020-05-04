@@ -8,4 +8,8 @@ public interface BookService {
 
 	Book getBookById(UUID bookId);
 
+	Book addBook(Book book);
+
+	void updateBook(UUID bookId, Book book);
+
 }

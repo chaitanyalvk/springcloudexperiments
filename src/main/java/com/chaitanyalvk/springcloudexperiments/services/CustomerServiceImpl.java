@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.chaitanyalvk.springcloudexperiments.model.Customer;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class CustomerServiceImpl implements CustomerService{
 
@@ -16,5 +19,26 @@ public class CustomerServiceImpl implements CustomerService{
 				.gender('M')
 				.age(30)
 				.build();
+	}
+
+	@Override
+	public Customer addCustomer(Customer customer) {
+		return Customer.builder().id(customer.getId())
+				.name(customer.getName())
+				.gender(customer.getGender())
+				.age(customer.getAge())
+				.build();
+	}
+
+	@Override
+	public void updateCustomer(UUID customerId, Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteCustomer(UUID customerId) {
+		log.debug("Deleted Customer by id - " + customerId);
+		
 	}
 }

@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.chaitanyalvk.springcloudexperiments.model.Book;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class BookServiceImpl implements BookService {
 
@@ -31,6 +34,12 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public void updateBook(UUID bookId, Book book) {
+		
+	}
+
+	@Override
+	public void deleteBook(UUID bookId) {
+		log.debug("Deleted Book by id - " + bookId);
 		
 	}
 

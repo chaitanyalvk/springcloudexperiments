@@ -1,5 +1,6 @@
 package com.chaitanyalvk.springcloudexperiments.model;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
@@ -18,5 +19,10 @@ public class Book {
 	private String isbn;
 	private String author;
 	
+	private double price;
+	
+	private OffsetDateTime publishedDate;
+	
+	private BookGenre genre;
 	
 }
